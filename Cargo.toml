@@ -1,0 +1,29 @@
+[package]
+name = "website-wasm"
+version = "0.1.0"
+authors = ["Jiayi Zhao <jeff.no.zhao@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = [ "cdylib", "rlib" ]
+
+[dependencies]
+lazy_static = "^1"
+serde = "^1"
+serde_derive = "^1"
+serde_json = "^1"
+wasm-bindgen-futures = "^0"
+yew = "^0"
+yew-router = "^0"
+
+[dependencies.wasm-bindgen]
+version = "^0"
+features = [ "serde-serialize" ]
+
+[dependencies.web-sys]
+version = "^0"
+features = [ "ScrollToOptions", "ScrollBehavior", "Window", "Request" ]
+
+

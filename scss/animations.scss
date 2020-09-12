@@ -1,0 +1,87 @@
+@mixin animate($val) {
+	animation: $val;
+	-moz-animation: $val;  
+	-webkit-animation: $val;
+	-o-animation: $val;
+	-ms-animation: $val;  
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes hamburger-menu-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(4rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(3rem);
+	}
+}
+
+@keyframes article-animation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes flex-card-animation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes home-animation {
+	0% {
+		transform: translateY(3rem);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes bar-1-animation {
+	50% {
+		transform: translateY(0.6rem);
+	}
+
+	100% {
+		transform: translateY(0.6rem) rotate(45deg);
+	}
+}
+
+@keyframes bar-3-animation {
+	50% {
+		transform: translateY(-0.6rem);
+	}
+	100% {
+		transform: translateY(-0.6rem) rotate(-45deg);
+	}
+}

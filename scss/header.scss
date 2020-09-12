@@ -1,0 +1,114 @@
+@import "animations.scss";
+@import "colors.scss";
+@import "constants.scss";
+@import "fonts.scss";
+
+.header {
+	ul {
+		list-style: none;
+	}
+}
+
+.topnav {
+	align-items: flex-start;
+	background-color: rgba(0, 0, 0, 0);
+	display: flex;
+	font-family: $font-family-p;
+	justify-content: space-between;
+	margin: 0;
+	min-height: 8vh;
+	padding: 0.7rem 2rem 1rem 2rem;
+	transition: 400s;
+
+	.logo {
+		margin: 10px;
+		display: inline-block;
+		img {
+			position: relative;
+			text-align: center;
+		}
+	}
+	.flex_group {
+		align-items: center;
+		display: inline-flex;
+		height: 100%;
+	}
+	.nav-links {
+		display: flex;
+		transition: 0.3s;
+		li {
+			list-style: none;
+			padding: 10px;
+			transition: 0.3s;
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.topnav {
+		padding: 0.7rem 1rem 1rem 1rem;
+
+		.flex_group {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.header-link {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 0 0.5rem;
+	padding: 0;
+    a {
+    	color: inherit;
+    	transition: 0.3s;
+    	text-decoration: none;
+	    &:hover {
+		    color: $primary-yellow;
+		    background-color: $link-hover-bg;
+	    }
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+.logo-link {
+	border-bottom: 3px solid white;
+	color: white;
+	font-family: $font-family-p;
+	font-size: 2rem;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin-right: 1rem;
+	padding-left: 0.3rem;
+	transition: 300ms;
+	text-decoration: none;
+	&:hover {
+		color: $primary-yellow;
+		background-color: $link-hover-bg;
+		border-bottom: 3px solid $primary-yellow;
+	}
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.logo-link {
+		font-size: 1.5rem;
+	}
+}
+
+.logo-link-nth {
+	color: white;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 2rem 0;
+	padding: 0;
+	transition: 0.3s;
+	text-decoration: none;
+	&:hover {
+		color: $primary-yellow;
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+}

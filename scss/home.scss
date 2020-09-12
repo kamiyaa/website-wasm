@@ -1,0 +1,133 @@
+@import "animations.scss";
+@import "colors.scss";
+@import "constants.scss";
+@import "fonts.scss";
+
+.home-content {
+	@include animate(home-animation 1s);
+	align-items: flex-start;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-family: $font-family-p;
+	justify-content: center;
+	margin: 1rem;
+
+	ul {
+		margin: 1rem 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin: 0.5rem 0;
+	}
+}
+
+.home-content-section {
+	margin: 1rem;
+}
+
+.home-link {
+	color: inherit;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 0.7rem 0 0;
+	padding: 0;
+    a {
+    	color: inherit;
+    	transition: 0.3s;
+	    text-decoration: none;
+	    &:hover {
+		    color: $primary-yellow;
+		    background-color: rgba(255,255,255,0.2);
+		    text-decoration: inherit;
+	    }
+	    &:visited {
+		    color: inherit;
+		    text-decoration: inherit;
+	    }
+	    &:visited:hover {
+		    color: $primary-yellow;
+		    text-decoration: inherit;
+	    }
+    }
+}
+
+.home-logo-link {
+	border-bottom: 3px solid white;
+	color: inherit;
+	font-family: $font-family-p;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	padding-left: 0.3rem;
+	transition: 0.3s;
+	text-decoration: none;
+	&:hover {
+		color: $primary-yellow;
+		background-color: rgba(255,255,255,0.2);
+		border-bottom: 3px solid $primary-yellow;
+		text-decoration: inherit;
+	}
+	&:visited {
+		color: inherit;
+		text-decoration: inherit;
+	}
+	&:visited:hover {
+		color: $primary-yellow;
+		text-decoration: inherit;
+	}
+}
+
+.home-icon {
+	color: inherit;
+	font-size: 26px;
+	margin-right: 0.8rem;
+	transition: 0.3s;
+	&:hover {
+		color: $primary-yellow;
+	}
+	&:visited {
+		color: inherit;
+	}
+	&:visited:hover {
+		color: $primary-yellow;
+	}
+}
+
+.home-profile {
+	border-radius: 9999px;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	height: 12rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.languages-list {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $font-family-tag;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0.5rem 0;
+	}
+
+	li {
+		color: white;
+		background-color: $tag-hover;
+		border-radius: 6px;
+		font-size: 14px;
+		padding: 0.2rem 0.5rem;
+		margin: 0rem 0.2rem 0.6rem 0.2rem;
+		transition: 500ms ease;
+		white-space: nowrap;
+	}
+}

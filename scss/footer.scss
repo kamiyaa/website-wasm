@@ -1,0 +1,87 @@
+@import "colors.scss";
+@import "constants.scss";
+@import "fonts.scss";
+
+.footer {
+	align-items: flex-end;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $font-family-p;
+	justify-content: space-between;
+	padding: 1rem 2rem 2rem 2rem;
+
+	a {
+		padding: 0px;
+		text-decoration: none;
+		&:hover {
+			color: $primary-yellow;
+		}
+	}
+
+	ul {
+		margin: 0.8rem;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin: 0.5rem 0;
+	}
+}
+
+.flex_group {
+	align-items: center;
+	display: inline-flex;
+	height: 100%;
+	margin: 0 0.8rem;
+}
+
+.footer-icon {
+	color: white;
+	font-size: 1.6rem;
+	margin-right: 0.8rem;
+	transition: 0.3s;
+	&:hover {
+		color: $primary-yellow;
+	}
+}
+
+.footer-link {
+	color: white;
+	font-size: 1rem;
+	transition: 0.3s;
+	&:hover {
+		color: $primary-yellow;
+	}
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.footer {
+		justify-content: space-between;
+		padding: 1rem 0 0 0;
+	}
+}
+
+.logo-link {
+	font-weight: bold;
+	letter-spacing: 4px;
+	a {
+		color: white;
+		border-bottom: 3px solid white;
+		text-decoration: none;
+		&:visited {
+			color: white;
+		}
+	}
+}
+
+.social_links {
+	ul {
+		list-style-type: none;
+	}
+	li {
+		display: inline;
+	}
+}

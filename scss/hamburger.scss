@@ -1,0 +1,142 @@
+@import "animations.scss";
+@import "colors.scss";
+@import "constants.scss";
+
+.non-hamburger-menu {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.non-hamburger-menu {
+		display: none;
+	}
+}
+
+.hamburger-menu {
+	align-items: center;
+	display: none;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	pointer-events: none;
+	transform: translateY(3.7rem);
+	transition-property: opacity transform;
+	transition-duration: 200ms;
+
+	ul {
+		background-color: $body-bg;
+		border-radius: 0.3rem;
+		box-shadow: 15px 15px 48px -16px #222;
+		padding: 0.5rem 1.5rem 1rem 1.5rem;
+		width: 100%;
+		li {
+			color: white;
+			margin: 1.2rem 0 1.2rem 0;
+			padding: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.hamburger-menu {
+		display: block;
+	}
+
+	.hamburger-menu.is-open {
+		pointer-events: auto;
+		opacity: 1;
+		transform: translateY(3.2rem);
+	}
+}
+
+.hamburger-button {
+	background-color: rgba(0,0,0,0);
+	border-bottom-color: white;
+	border-style: none;
+	cursor: pointer;
+	display: none;
+	height: 1.8rem;
+	width: 2.5rem;
+	margin: 0.5rem 0 0 0;
+	padding: 0;
+	transition: 300ms;
+	z-index: 100;
+
+	&:hover {
+		.bar1, .bar2, .bar3 {
+			background-color: $primary-yellow;
+		}
+	}
+
+	&.is-open {
+		.bar1 {
+			transform: translateY(0.6rem) rotate(45deg);
+
+		}
+		.bar2 {
+			opacity: 0;
+		}
+		.bar3 {
+			transform: translateY(-0.6rem) rotate(-45deg);
+		}
+	}
+
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.hamburger-button {
+		display: block;
+		float: right;
+	}
+}
+
+.menu-icon {
+	background: rgba(0, 0, 0, 0);
+	cursor: pointer;
+	display: block;
+}
+
+$bar-start: 1.4rem;
+$bar-spacing: 0.6rem;
+$bar-height: 0.18rem;
+
+$bar1-top: $bar-start;
+$bar2-top: calc(#{$bar1-top} + #{$bar-spacing});
+$bar3-top: calc(#{$bar2-top} + #{$bar-spacing});
+
+.bar1, .bar2, .bar3 {
+	background-color: white;
+	border-radius: 0px;
+	position: absolute;
+	height: $bar-height;
+	width: 2rem;
+	padding: 0;
+	transition-duration: 300ms;
+
+	right: 2rem;
+}
+
+.bar1 {
+	top: $bar1-top;
+	transition-property: transform;
+	will-change: transform;
+}
+
+.bar2 {
+	top: $bar2-top;
+	will-change: opacity;
+	transition-property: opacity;
+}
+
+.bar3 {
+	top: $bar3-top;
+	transition-property: transform;
+	will-change: transform;
+}

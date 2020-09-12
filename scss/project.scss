@@ -1,0 +1,64 @@
+@import "colors.scss";
+@import "constants.scss";
+
+.project-image {
+	border-radius: 6px;
+	box-shadow: 0 0 25px -4px #888;
+	display: inline;
+	float: right;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	max-height: 300px;
+	max-width: 100%;
+	overflow: hidden;
+	padding: 0;
+	transition: .5s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.project-icon-medium {
+	color: black;
+	display: inline;
+	font-size: 1.8rem;
+	transition: color 300ms;
+	&:hover {
+		color: $body-bg-hover;
+	}
+}
+
+.project-icon-small {
+	color: black;
+	margin: 0 0.2rem 0.1rem 0.6rem;
+	transition: color 300ms;
+	&:hover {
+		color: $body-bg-hover;
+	}
+}
+
+.project-load-error {
+	background-color: $color-red1;
+	color: white;
+	display: inline;
+	font-size: 0.8rem;
+	border-radius: 6px;
+	padding: 0.2rem 0.4rem;
+	margin: 0 1rem;
+	transition-duration: 400ms;
+
+	&:hover {
+		background-color: $color-red2;
+	}
+}
+
+.project-list {
+	ul {
+		list-style-type: none;
+	}
+	li {
+		float: left;
+	}
+}
