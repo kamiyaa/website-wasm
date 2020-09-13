@@ -15,7 +15,24 @@ pub struct Experience {
     pub tags: &'static [&'static str],
 }
 
-pub static EXPERIENCE_LIST: [Experience; 3] = [
+pub type ExperienceListType = [Experience; 4];
+
+pub static EXPERIENCE_LIST: ExperienceListType = [
+    Experience {
+        title: "Quantitative Software Developer",
+        company: "SpireTrading",
+        company_url: "https://spiretrading.com/",
+        start_date: "May 2020",
+        end_date: "August 2020",
+        preview_url: "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/spiretrading.png",
+        preview_thumbnail_url:
+            "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/spiretrading.png",
+        html: spiretrading::component,
+        tags: &[
+            "C", "Java", "Docker", "Jenkins", "Appsody", "Maven", "Capstone", "Linux", "AIX",
+            "z/OS", "PowerPC", "Systemz",
+        ],
+    },
     Experience {
         title: "Open Source Runtime Developer",
         company: "IBM",

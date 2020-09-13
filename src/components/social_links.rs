@@ -1,10 +1,11 @@
 use yew::prelude::*;
 
-const RESUME_LINK: &str =
-    "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/1.0.0/Resume-Jeff-Zhao.pdf";
 const GITHUB_LINK: &str = "https://github.com/kamiyaa/";
 const LINKEDIN_LINK: &str = "https://www.linkedin.com/in/jiayii-zhao/";
+const YOUTUBE_LINK: &str = "https://www.youtube.com/channel/UC6NPLaq5poP-CoLo3DPCC8w";
 const EMAIL_LINK: &str = "mailto:jeff.no.zhao@gmail.com";
+const RESUME_LINK: &str =
+    "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/Resume-Jeff-Zhao.pdf";
 
 #[derive(Clone, Debug)]
 pub struct SocialLinks {
@@ -41,6 +42,13 @@ impl Component for SocialLinks {
             <a
                 class="home-icon" target="_blank" rel="noopener noreferrer"
                 href={LINKEDIN_LINK}><i class="fab fa-linkedin fa-lg"/>
+            </a>
+            </li>
+
+            <li>
+            <a
+                class="home-icon" target="_blank" rel="noopener noreferrer"
+                href={YOUTUBE_LINK}><i class="fab fa-youtube fa-lg"></i>
             </a>
             </li>
 

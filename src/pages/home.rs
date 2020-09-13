@@ -27,7 +27,7 @@ impl Component for Home {
                 html! {
                     <li><div class="home-link">
                         <AppRouteAnchor route={v.route.clone()}>
-                            {v.name}
+                            {"> "}{v.name}
                         </AppRouteAnchor>
                     </div></li>
                 }

@@ -2,11 +2,11 @@ use yew::prelude::*;
 
 use super::PageTemplate;
 use crate::components::{ExperienceCard, MenuStrip};
-use crate::data::{AppRoute, Experience, EXTRACURRICULAR_LIST};
+use crate::data::{AppRoute, ExperienceListType, EXTRACURRICULAR_LIST};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
-    pub list: &'static [Experience; 3],
+    pub list: &'static ExperienceListType,
 }
 
 #[derive(Clone, Debug)]
@@ -79,7 +79,8 @@ fn extracurricular_content() -> Html {
         .map(|e| {
             html! {
                 <div>
-                <a href={e.url}><h4>{e.name}</h4></a>
+                <a target="_blank" rel="noopener noreferrer"
+                    href={e.url}><h4>{e.name}</h4></a>
                 <h6><b>{e.title}</b></h6>
                 {e.date}
 
