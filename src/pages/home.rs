@@ -56,7 +56,7 @@ impl Component for Home {
 fn about_content() -> Html {
     html! {
     <div>
-        <p>{ "Hi, my name is Jiayi Zhao (" }<b>{ "Jeff" }</b>{ ")." }
+        <p>{ "Hi, my name is Jeff Zhao." }
         <br/>
         { "I'm currently a 4th year student studying Computer Science at the "}<b>{ "University of Toronto" }</b>{ "." }
         <br/>

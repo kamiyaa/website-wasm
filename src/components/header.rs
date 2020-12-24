@@ -24,11 +24,11 @@ impl Component for Header {
     fn update(&mut self, _msg: Self::Message) -> ShouldRender {
         if let Some(element) = self.menu_ref.cast::<Element>() {
             let class_list = element.class_list();
-            class_list.toggle("is-open");
+            let _ = class_list.toggle("is-open");
         }
         if let Some(element) = self.menu_btn_ref.cast::<Element>() {
             let class_list = element.class_list();
-            class_list.toggle("is-open");
+            let _ = class_list.toggle("is-open");
         }
         true
     }

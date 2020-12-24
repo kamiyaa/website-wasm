@@ -72,6 +72,10 @@
         &:visited {
             color: white;
         }
+	    &:visited:hover {
+		    color: $primary-yellow;
+		    text-decoration: inherit;
+	    }
     }
 }
 

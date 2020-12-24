@@ -13,7 +13,7 @@ extern "C" {
 pub struct AppRouter;
 
 impl Component for AppRouter {
-    type Message = AppRoute;
+    type Message = ();
     type Properties = ();
     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
         Self {}

@@ -40,7 +40,6 @@ impl Component for ExperienceHeader {
 
         html! {
         <div>
-
             <h2 id={experience.title}>{experience.title}</h2>
             <h4><a
                 target="_blank"
