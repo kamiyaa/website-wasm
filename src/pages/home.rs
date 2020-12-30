@@ -1,7 +1,7 @@
 use yew::prelude::*;
 
 use crate::components::SocialLinks;
-use crate::data::{AppRoute, AppRouteAnchor, HEADER_LINKS, LOGO_NAME};
+use crate::data::{AppRoute, Link, HEADER_LINKS, LOGO_NAME};
 
 pub struct Home;
 
@@ -26,9 +26,9 @@ impl Component for Home {
             .map(|v| {
                 html! {
                     <li><div class="home-link">
-                        <AppRouteAnchor route={v.route.clone()}>
+                        <Link route={v.route.clone()}>
                             {"> "}{v.name}
-                        </AppRouteAnchor>
+                        </Link>
                     </div></li>
                 }
             })
@@ -42,7 +42,7 @@ impl Component for Home {
                 src="https://raw.githubusercontent.com/kamiyaa/kamiyaa.github.io/master/img/profile.jpg"/>
             </div>
             <div class="home-content-section">
-                <AppRouteAnchor classes="home-logo-link" route={AppRoute::Index}>{LOGO_NAME}</AppRouteAnchor>
+                <Link classes="home-logo-link" route={AppRoute::Index}>{LOGO_NAME}</Link>
                 <br/>
                 <SocialLinks/>
                 <ul>{header_links}</ul>

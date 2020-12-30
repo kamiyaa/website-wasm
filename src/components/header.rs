@@ -1,7 +1,7 @@
 use web_sys::Element;
 use yew::prelude::*;
 
-use crate::data::{AppRoute, AppRouteAnchor, HEADER_LINKS, LOGO_NAME};
+use crate::data::{AppRoute, Link, HEADER_LINKS, LOGO_NAME};
 
 #[derive(Clone, Debug)]
 pub struct Header {
@@ -54,9 +54,9 @@ impl Component for Header {
             {
                 HEADER_LINKS.iter().map(|v| html!{
                     <li><div class="header-link">
-                        <AppRouteAnchor route={v.route.clone()}>
+                        <Link route={v.route.clone()}>
                         {v.name}
-                        </AppRouteAnchor>
+                        </Link>
                     </div></li>
                 }).collect::<Html>()
             }
@@ -67,10 +67,10 @@ impl Component for Header {
                 <ul>
                 {
                     HEADER_LINKS.iter().map(|v| html!{
-                        <li><AppRouteAnchor classes="logo-link-nth"
+                        <li><Link classes="logo-link-nth"
                             route={v.route.clone()}>
                             {v.name}
-                            </AppRouteAnchor>
+                            </Link>
                         </li>
                     }).collect::<Html>()
                 }
@@ -84,7 +84,7 @@ impl Component for Header {
             <nav class="topnav">
                 <div class="flex_group">
                     <div class="logo-link">
-                    <AppRouteAnchor route={AppRoute::Index}>{LOGO_NAME}</AppRouteAnchor>
+                    <Link route={AppRoute::Index}>{LOGO_NAME}</Link>
                     </div>
                     {non_hamburger_menu}
                 </div>

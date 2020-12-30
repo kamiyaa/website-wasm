@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-use crate::data::{AppRoute, AppRouteAnchor, Project};
+use crate::data::{AppRoute, Link, Project};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -33,7 +33,7 @@ impl Component for ProjectCard {
         let project = &self.props.project;
         html! {
         <div class="flex_card">
-            <AppRouteAnchor route={self.props.route.clone()}>
+            <Link route={self.props.route.clone()}>
                 <div class="flex_card_img_container">
                          <img alt={project.name} src={project.preview_url}/>
                 </div>
@@ -42,7 +42,7 @@ impl Component for ProjectCard {
                         <h5>{project.languages.join(", ")}</h5>
                         <p>{project.description}</p>
                 </div>
-            </AppRouteAnchor>
+            </Link>
         </div>
                 }
     }

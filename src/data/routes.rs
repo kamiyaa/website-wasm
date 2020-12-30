@@ -16,4 +16,4 @@ pub enum AppRoute {
     Index,
 }
 
-pub type AppRouteAnchor = RouterAnchor<AppRoute>;
+pub type Link = RouterAnchor<AppRoute>;

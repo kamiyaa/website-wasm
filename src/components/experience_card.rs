@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-use crate::data::{AppRoute, AppRouteAnchor, Experience};
+use crate::data::{AppRoute, Link, Experience};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -33,7 +33,7 @@ impl Component for ExperienceCard {
         let experience = &self.props.experience;
         html! {
         <div class="flex_card">
-            <AppRouteAnchor route={self.props.route.clone()}>
+            <Link route={self.props.route.clone()}>
                 <div class="flex_card_img_container">
                          <img alt={experience.company} src={experience.preview_thumbnail_url}/>
                 </div>
@@ -42,7 +42,7 @@ impl Component for ExperienceCard {
                     <h6>{experience.company}</h6>
                     <p>{experience.start_date}{" - "}{experience.end_date}</p>
                 </div>
-            </AppRouteAnchor>
+            </Link>
         </div>
                 }
     }

@@ -1,16 +1,16 @@
 use super::AppRoute;
 
-pub struct Link {
+pub struct URLRoute {
     pub name: &'static str,
     pub route: AppRoute,
 }
 
-pub static HEADER_LINKS: [Link; 2] = [
-    Link {
+pub static HEADER_LINKS: [URLRoute; 2] = [
+    URLRoute {
         name: "Experiences",
         route: AppRoute::Experiences,
     },
-    Link {
+    URLRoute {
         name: "Projects",
         route: AppRoute::Projects,
     },

@@ -2,7 +2,7 @@ use yew::prelude::*;
 
 use super::PageTemplate;
 use crate::components::{ExperienceHeader, MenuStrip};
-use crate::data::{AppRoute, AppRouteAnchor, Experience};
+use crate::data::{AppRoute, Link, Experience};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -32,7 +32,7 @@ impl Component for ExperienceDetails {
 
     fn view(&self) -> Html {
         let bookmarks_component = html! {
-            <AppRouteAnchor classes="article-topbar-link"
+            <Link classes="article-topbar-link"
                 route={AppRoute::Experiences}>
             <div class="menu-strip-item">
                 <div class="fa fa-angle-left fa-lg"/>
@@ -40,7 +40,7 @@ impl Component for ExperienceDetails {
                 { "Experiences" }
                 </div>
             </div>
-            </AppRouteAnchor>
+            </Link>
         };
         let content = (self.props.experience.html)();
 
