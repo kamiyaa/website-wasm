@@ -3,9 +3,6 @@ My personal website written in rust via yew/wasm
 
 ## Dependencies
 see [here](https://yew.rs/docs/en/getting-started/build-a-sample-app)
-```
-cargo +nightly install miniserve
-```
 
 ## Building
 ```
