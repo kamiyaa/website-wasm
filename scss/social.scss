@@ -1,0 +1,34 @@
+@import "colors.scss";
+@import "constants.scss";
+@import "fonts.scss";
+
+.social_links {
+	transition: 400s;
+	a {
+		color: $fg-1;
+		font-size: 1.6rem;
+		transition: 0.3s;
+		&:hover {
+			color: $accent-2;
+		}
+	}
+	ul {
+		list-style-type: none;
+	}
+	li {
+		display: inline;
+		margin-right: 0.8rem;
+	}
+}
+
+.social-icon {
+	color: inherit;
+	font-size: 26px;
+	transition: 0.3s;
+	&:hover &:visited:hover {
+		color: $accent-2;
+	}
+	&:visited {
+		color: inherit;
+	}
+}

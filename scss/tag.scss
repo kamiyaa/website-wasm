@@ -2,7 +2,7 @@
 @import "constants.scss";
 @import "fonts.scss";
 
-#tag-list {
+.tag-list {
 	align-items: flex-start;
 	display: flex;
 	flex-wrap: nowrap;
@@ -14,17 +14,14 @@
 	width: 100%;
 
 	li {
-		color: white;
-		background-color: $body-bg;
-		border-radius: 6px;
+		color: $accent-1;
+		background-color: $card-bg;
+		border-radius: 10px;
 		font-size: 14px;
 		padding: 0.2rem 0.5rem;
 		margin: 0 0.2rem;
 		transition: 500ms ease;
 		white-space: nowrap;
-		&:hover {
-			background-color: $tag-hover;
-		}
 	}
 }
 

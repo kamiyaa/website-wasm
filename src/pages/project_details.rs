@@ -2,7 +2,8 @@ use yew::prelude::*;
 
 use super::PageTemplate;
 use crate::components::{MenuStrip, ProjectHeader};
-use crate::data::{AppRoute, Link, Project};
+use crate::data::Project;
+use crate::routes::{AppRoute, Link};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -31,28 +32,14 @@ impl Component for ProjectDetails {
     }
 
     fn view(&self) -> Html {
-        let bookmarks_component = html! {
-            <Link classes="article-topbar-link"
-                route={AppRoute::Projects}>
-            <div class="menu-strip-item">
-                <div class="fa fa-angle-left fa-lg"/>
-                <div style="display: inline; margin-left: 0.5rem;">
-                { "Projects" }
-                </div>
-            </div>
-            </Link>
-        };
-        let content = (self.props.project.html)();
-
         html! {
         <PageTemplate>
-        <div class="article">
-            <MenuStrip>{bookmarks_component}</MenuStrip>
-            <div class="article-content">
-            <ProjectHeader project={&self.props.project}/>
-            {content}
+            <div class="article">
+                <div class="article-content">
+                <ProjectHeader project={&self.props.project}/>
+                {(self.props.project.content)()}
+                </div>
             </div>
-        </div>
         </PageTemplate>
                 }
     }

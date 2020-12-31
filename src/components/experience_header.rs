@@ -30,7 +30,7 @@ impl Component for ExperienceHeader {
     fn view(&self) -> Html {
         let experience = &self.props.experience;
         let tag_component = html! {
-            <ul id="tag-list">
+            <ul class="tag-list">
                 { experience.tags.iter()
                     .map(|tag| html!{ <li>{tag}</li> })
                     .collect::<Html>()
@@ -41,10 +41,12 @@ impl Component for ExperienceHeader {
         html! {
         <div>
             <h2 id={experience.title}>{experience.title}</h2>
-            <h4><a
+            <br/>
+            <h6><a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={experience.company_url}>{experience.company}</a></h4>
+                href={experience.company_url}>{experience.company}</a></h6>
+            <br/>
             <h6>{experience.start_date}{" - "}{experience.end_date}</h6>
             {tag_component}
             <br/>

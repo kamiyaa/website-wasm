@@ -9,9 +9,9 @@ pub struct Experience {
     pub company_url: &'static str,
     pub start_date: &'static str,
     pub end_date: &'static str,
-    pub preview_url: &'static str,
-    pub preview_thumbnail_url: &'static str,
-    pub html: fn() -> Html,
+    pub icon_url: &'static str,
+    pub summary: fn() -> Html,
+    pub content: fn() -> Html,
     pub tags: &'static [&'static str],
 }
 
@@ -23,11 +23,10 @@ pub static EXPERIENCE_LIST: ExperienceListType = [
         company: "SpireTrading",
         company_url: "https://spiretrading.com/",
         start_date: "May 2020",
-        end_date: "August 2020",
-        preview_url: "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/spiretrading.png",
-        preview_thumbnail_url:
-            "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/spiretrading.png",
-        html: spiretrading::component,
+        end_date: "Aug 2020",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/spiretrading_icon.png",
+        summary: spiretrading::summary,
+        content: spiretrading::content,
         tags: &[
             "C", "Java", "Docker", "Jenkins", "Appsody", "Maven", "Capstone", "Linux", "AIX",
             "z/OS", "PowerPC", "Systemz",
@@ -38,11 +37,10 @@ pub static EXPERIENCE_LIST: ExperienceListType = [
         company: "IBM",
         company_url: "https://www.ibm.com/",
         start_date: "May 2019",
-        end_date: "April 2020",
-        preview_url: "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/IBM.jpg",
-        preview_thumbnail_url:
-            "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/IBM.jpg",
-        html: ibm::component,
+        end_date: "Apr 2020",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/ibm_icon.png",
+        summary: ibm::summary,
+        content: ibm::content,
         tags: &[
             "C", "Java", "Docker", "Jenkins", "Appsody", "Maven", "Capstone", "Linux", "AIX",
             "z/OS", "PowerPC", "Systemz",
@@ -52,12 +50,11 @@ pub static EXPERIENCE_LIST: ExperienceListType = [
         title: "Teaching Assistant",
         company: "University of Toronto",
         company_url: "https://www.utoronto.ca/",
-        start_date: "September 2017",
-        end_date: "December 2019",
-        preview_url: "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/UofT_002.jpg",
-        preview_thumbnail_url:
-            "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/UofT_002.jpg",
-        html: uoft::component,
+        start_date: "Sept 2017",
+        end_date: "Dec 2019",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/uoft_icon.png",
+        summary: uoft::summary,
+        content: uoft::content,
         tags: &[
             "C",
             "Python",
@@ -74,11 +71,10 @@ pub static EXPERIENCE_LIST: ExperienceListType = [
         company: "Ontario Public Service",
         company_url: "https://www.ontario.ca/",
         start_date: "May 2018",
-        end_date: "August 2018",
-        preview_url: "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/OPS_002.png",
-        preview_thumbnail_url:
-            "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/OPS_002.png",
-        html: ops::component,
+        end_date: "Aug 2018",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/ontario_icon.jpg",
+        summary: ops::summary,
+        content: ops::content,
         tags: &[
             "Java",
             "JasperReports",

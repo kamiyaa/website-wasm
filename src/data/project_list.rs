@@ -28,7 +28,7 @@ pub struct Project {
     pub preview_url: &'static str,
     pub preview_thumbnail_url: &'static str,
     pub tags: &'static [&'static str],
-    pub html: fn() -> Html,
+    pub content: fn() -> Html,
 }
 
 pub type ProjectListType = [Project; 5];
@@ -53,7 +53,7 @@ pub static PROJECT_LIST: ProjectListType = [
             "Boxing",
             "Toml",
         ],
-        html: joshuto::component,
+        content: joshuto::content,
     },
     Project {
         name: "Ruiji",
@@ -65,7 +65,7 @@ pub static PROJECT_LIST: ProjectListType = [
         preview_url: "https://github.com/kamiyaa/ruiji/raw/master/ruiji_screenshot.png",
         preview_thumbnail_url: "https://github.com/kamiyaa/ruiji/raw/master/ruiji_screenshot.png",
         tags: &["C", "Curl", "Make", "Meson"],
-        html: ruiji::component,
+        content: ruiji::content,
     },
     Project {
         name: "Game of Life",
@@ -77,7 +77,7 @@ pub static PROJECT_LIST: ProjectListType = [
         preview_url: "https://github.com/kamiyaa/game-of-life/raw/master/screenshot.png",
         preview_thumbnail_url: "https://github.com/kamiyaa/game-of-life/raw/master/screenshot.png",
         tags: &["Rust", "WebAssembly", "Javascript", "Webpack"],
-        html: game_of_life::component,
+        content: game_of_life::content,
     },
     Project {
         name: "SpaceFarmerBot",
@@ -91,7 +91,7 @@ pub static PROJECT_LIST: ProjectListType = [
         preview_thumbnail_url:
             "https://raw.githubusercontent.com/Tusk98/SpaceFarmerBot/master/SpaceFarmer.jpg",
         tags: &["Golang", "Discord", "Json"],
-        html: space_farmer_bot::component,
+        content: space_farmer_bot::content,
     },
     Project {
         name: "Website",
@@ -104,6 +104,6 @@ pub static PROJECT_LIST: ProjectListType = [
         preview_thumbnail_url:
             "https://github.com/kamiyaa/kamiyaa.github.io/raw/master/img/preview.png",
         tags: &["Javascript", "React", "React Hooks", "Sass", "npm"],
-        html: website::component,
+        content: website::content,
     },
 ];

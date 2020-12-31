@@ -2,8 +2,9 @@ use wasm_bindgen::prelude::*;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::data::{AppRoute, EXPERIENCE_LIST, PROJECT_LIST};
+use crate::data::{EXPERIENCE_LIST, PROJECT_LIST};
 use crate::pages;
+use crate::routes::AppRoute;
 
 #[wasm_bindgen]
 extern "C" {
@@ -29,20 +30,11 @@ impl Component for AppRouter {
 
     fn view(&self) -> Html {
         let render_func = Router::render(|switch: AppRoute| match switch {
-            AppRoute::Index => html! {
+            AppRoute::Index | AppRoute::Home => html! {
                 <pages::Home/>
-            },
-            AppRoute::Home => html! {
-                <pages::Home/>
-            },
-            AppRoute::Experiences => html! {
-                <pages::ExperienceList list={&EXPERIENCE_LIST}/>
             },
             AppRoute::Experience(id) => html! {
                 <pages::ExperienceDetails experience={&EXPERIENCE_LIST[id]}/>
-            },
-            AppRoute::Projects => html! {
-                <pages::ProjectsList list={&PROJECT_LIST}/>
             },
             AppRoute::Project(id) => html! {
                 <pages::ProjectDetails project={&PROJECT_LIST[id]}/>

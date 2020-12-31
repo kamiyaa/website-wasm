@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-pub fn component() -> Html {
+pub fn content() -> Html {
     html! {
     <div>
     <p>{ "This project, I worked with a colleague to produce a fast, customized Discord bot for our servers. We added support for serving images from image boards, reverse image searching images that user provides and giving wiki data when user requested." }

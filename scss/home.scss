@@ -3,16 +3,32 @@
 @import "constants.scss";
 @import "fonts.scss";
 
-.home-content {
-	@include animate(home-animation 1s);
+.home {
 	align-items: flex-start;
-	color: white;
+	color: $fg-2;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: $font-family-p;
+	margin: 0;
+	padding: 0;
+	ul {
+		margin: 1rem 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin: 0.5rem 0;
+	}
+}
+
+.home-header {
+	align-items: flex-start;
+	color: $fg-2;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	font-family: $font-family-p;
 	justify-content: center;
-	margin: 1rem;
 
 	ul {
 		margin: 1rem 0;
@@ -24,8 +40,24 @@
 	}
 }
 
-.home-content-section {
+.home-header-section {
 	margin: 1rem;
+}
+
+.home-section {
+	display: flex;
+	margin: 0 3rem;
+	overflow-x: auto;
+
+	h2 {
+		font-weight: 700;
+	}
+}
+
+@media only screen and (max-width: $mobile-max-size) {
+	.home-section {
+		margin: 0 1rem;
+	}
 }
 
 .home-link {
@@ -34,65 +66,44 @@
 	font-weight: bold;
 	margin: 0 0.7rem 0 0;
 	padding: 0;
-    a {
-    	color: inherit;
-    	transition: 0.3s;
-	    text-decoration: none;
-	    &:hover {
-		    color: $primary-yellow;
-		    background-color: rgba(255,255,255,0.2);
-		    text-decoration: inherit;
-	    }
-	    &:visited {
-		    color: inherit;
-		    text-decoration: inherit;
-	    }
-	    &:visited:hover {
-		    color: $primary-yellow;
-		    text-decoration: inherit;
-	    }
-    }
+
+	a {
+		color: inherit;
+		transition: 0.3s;
+		text-decoration: none;
+		&:hover {
+			color: $accent-1;
+			background-color: rgba(255,255,255,0.2);
+			text-decoration: inherit;
+		}
+		&:visited {
+			color: inherit;
+			text-decoration: inherit;
+		}
+		&:visited:hover {
+			color: $accent-1;
+			text-decoration: inherit;
+		}
+	}
 }
 
-.home-logo-link {
-	border-bottom: 3px solid white;
-	color: inherit;
-	font-family: $font-family-p;
-	font-size: 30px;
+.logo-link {
+	color: $fg-1;
+	font-size: 1.8rem;
 	font-weight: bold;
-	letter-spacing: 3px;
-	padding-left: 0.3rem;
-	transition: 0.3s;
-	text-decoration: none;
-	&:hover {
-		color: $primary-yellow;
-		background-color: rgba(255,255,255,0.2);
-		border-bottom: 3px solid $primary-yellow;
-		text-decoration: inherit;
-	}
-	&:visited {
+	margin: 0;
+	padding: 0;
+	a {
 		color: inherit;
-		text-decoration: inherit;
-	}
-	&:visited:hover {
-		color: $primary-yellow;
-		text-decoration: inherit;
-	}
-}
-
-.home-icon {
-	color: inherit;
-	font-size: 26px;
-	margin-right: 0.8rem;
-	transition: 0.3s;
-	&:hover {
-		color: $primary-yellow;
-	}
-	&:visited {
-		color: inherit;
-	}
-	&:visited:hover {
-		color: $primary-yellow;
+		transition: 0.3s;
+		text-decoration: none;
+		&:hover {
+			color: $accent-2;
+		}
+		&:visited:hover {
+			color: $accent-2;
+			text-decoration: inherit;
+		}
 	}
 }
 

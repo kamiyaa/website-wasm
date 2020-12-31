@@ -31,7 +31,7 @@
 	transition-duration: 200ms;
 
 	ul {
-		background-color: $body-bg;
+		background-color: $bg-body;
 		border-radius: 0.3rem;
 		box-shadow: 15px 15px 48px -16px #222;
 		padding: 0.5rem 1.5rem 1rem 1.5rem;
@@ -71,7 +71,7 @@
 
 	&:hover {
 		.bar1, .bar2, .bar3 {
-			background-color: $primary-yellow;
+			background-color: $accent-1;
 		}
 	}
 

@@ -1,6 +1,14 @@
 use yew::prelude::*;
 
-pub fn component() -> Html {
+pub fn summary() -> Html {
+    html! {
+    <div>
+    <br/>
+    </div>
+    }
+}
+
+pub fn content() -> Html {
     html! {
     <div>
     <p>{ "At Ontario Public Service (OPS), I was working on the Case and Grant Management Systems team. This team is responsible for managing investigation cases by the government as well as grants for public services." }

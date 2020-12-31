@@ -1,7 +1,11 @@
 use yew::prelude::*;
 
-use crate::components::SocialLinks;
-use crate::data::{AppRoute, Link, HEADER_LINKS, LOGO_NAME};
+use crate::components::{Footer, HomeHeader};
+use crate::data::LOGO_NAME;
+use crate::data::{CONTRIBUTION_LIST, EXPERIENCE_LIST, PROJECT_LIST};
+use crate::routes::{AppRoute, Link};
+
+use crate::components::{ContributionList, ExperienceList, ProjectList};
 
 pub struct Home;
 
@@ -21,52 +25,37 @@ impl Component for Home {
     }
 
     fn view(&self) -> Html {
-        let header_links = HEADER_LINKS
-            .iter()
-            .map(|v| {
-                html! {
-                    <li><div class="home-link">
-                        <Link route={v.route.clone()}>
-                            {"> "}{v.name}
-                        </Link>
-                    </div></li>
-                }
-            })
-            .collect::<Html>();
         html! {
-        <div class="home-content">
-            <div class="home-content-section">
-            <img
-                class="home-profile"
-                alt="profile"
-                src="https://raw.githubusercontent.com/kamiyaa/kamiyaa.github.io/master/img/profile.jpg"/>
+        <div class="home">
+            <HomeHeader/>
+            <div class="home-section">
+                <div style="width: 100%;">
+                    <h2 id="experiences">{"Experiences"}</h2>
+                    <div>
+                    <ExperienceList list={&EXPERIENCE_LIST}/>
+                    </div>
+                </div>
             </div>
-            <div class="home-content-section">
-                <Link classes="home-logo-link" route={AppRoute::Index}>{LOGO_NAME}</Link>
-                <br/>
-                <SocialLinks/>
-                <ul>{header_links}</ul>
-                {about_content()}
+            <div class="home-section">
+                <div style="width: 100%;">
+                    <h2 id="projects">{"Projects"}</h2>
+                    <div>
+                    <ProjectList list={&PROJECT_LIST}/>
+                    </div>
+                </div>
             </div>
+            <div class="home-section">
+                <div style="width: 100%;">
+                    <h2 id="contributions">{"Contributions"}</h2>
+                    <div>
+                    <ContributionList list={&CONTRIBUTION_LIST}/>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <Footer/>
         </div>
                 }
     }
-}
-
-fn about_content() -> Html {
-    html! {
-    <div>
-        <p>{ "Hi, my name is Jeff Zhao." }
-        <br/>
-        { "I'm currently a 4th year student studying Computer Science at the "}<b>{ "University of Toronto" }</b>{ "." }
-        <br/>
-        { "I enjoy working with open source software, learning new technologies" }
-        <br/>
-        { "and coming up with innovative ways to solve problems." }
-        <br/>
-        </p>
-        <p>{ "Feel free to look around!" }
-        </p>
-    </div>
-        }
 }

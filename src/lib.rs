@@ -6,6 +6,7 @@ mod app_router;
 mod components;
 mod data;
 mod pages;
+mod routes;
 
 use app_router::AppRouter;
 
@@ -31,9 +32,7 @@ impl Component for Model {
 
     fn view(&self) -> Html {
         html! {
-            <div>
-                <AppRouter/>
-            </div>
+            <AppRouter/>
         }
     }
 }

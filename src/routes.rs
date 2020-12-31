@@ -4,12 +4,8 @@ use yew_router::prelude::*;
 pub enum AppRoute {
     #[to = "/experiences/{id}"]
     Experience(usize),
-    #[to = "/experiences"]
-    Experiences,
     #[to = "/projects/{id}"]
     Project(usize),
-    #[to = "/projects"]
-    Projects,
     #[to = "/home"]
     Home,
     #[to = "/"]

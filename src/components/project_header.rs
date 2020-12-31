@@ -62,7 +62,7 @@ impl Component for ProjectHeader {
     fn view(&self) -> Html {
         let project = &self.props.project;
         let tag_component = html! {
-            <ul id="tag-list">
+            <ul class="tag-list">
                 { project.tags.iter()
                     .map(|tag| html!{ <li>{tag}</li> })
                     .collect::<Html>()
@@ -101,7 +101,7 @@ impl Component for ProjectHeader {
                     <div style="display: inline; margin-left: 0.4rem; margin-right: 0.2rem;">
                     <i class="fas fa-star fa-lg"/></div>
                     {g.stargazers_count}
-                    <div style="display: inline; margin-left: 0.4rem; margin-right: 0.2rem;">
+                    <div style="display: inline; margin-left: 0.6rem; margin-right: 0.2rem;">
                     <i class="fas fa-code-branch fa-lg"/></div>
                     {g.forks_count}
                 </div>
@@ -114,9 +114,9 @@ impl Component for ProjectHeader {
         html! {
         <div>
             <h3 id={project.name}>{project.name}</h3>
+            <br/>
             <h6>{project.description}{", "}{project.languages.join(", ")}</h6>
-
-            <div style="margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <div class="project-github">
                 <a target="_blank" href={project.url} rel="noopener noreferrer">
                     <i class="fab fa-github fa-2x"/>
                 </a>

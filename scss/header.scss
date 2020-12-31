@@ -1,9 +1,9 @@
-@import "animations.scss";
 @import "colors.scss";
 @import "constants.scss";
 @import "fonts.scss";
 
 .header {
+	background-color: $card-bg;
 	ul {
 		list-style: none;
 	}
@@ -56,63 +56,21 @@
 }
 
 .header-link {
-	color: white;
+	color: $fg-1;
 	font-size: 1.5rem;
 	font-weight: bold;
-	margin: 0 0.5rem;
+	margin: 0;
 	padding: 0;
-    a {
-    	color: inherit;
-    	transition: 0.3s;
-    	text-decoration: none;
-	    &:hover {
-		    color: $primary-yellow;
-		    background-color: $link-hover-bg;
-	    }
-        &:visited {
-            color: white;
-        }
-	    &:visited:hover {
-		    color: $primary-yellow;
-		    text-decoration: inherit;
-	    }
-    }
-}
-
-.logo-link {
-	border-bottom: 3px solid white;
-	color: white;
-	font-family: $font-family-p;
-	font-size: 2rem;
-	font-weight: bold;
-	letter-spacing: 3px;
-	margin-right: 1rem;
-	padding-left: 0.3rem;
-	transition: 300ms;
-	text-decoration: none;
-	&:hover {
-		color: $primary-yellow;
-		background-color: $link-hover-bg;
-		border-bottom: 3px solid $primary-yellow;
-	}
-}
-
-@media only screen and (max-width: $mobile-max-size) {
-	.logo-link {
-		font-size: 1.5rem;
-	}
-}
-
-.logo-link-nth {
-	color: white;
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin: 2rem 0;
-	padding: 0;
-	transition: 0.3s;
-	text-decoration: none;
-	&:hover {
-		color: $primary-yellow;
-		background-color: rgba(255, 255, 255, 0.2);
+	a {
+		color: inherit;
+		transition: 0.3s;
+		text-decoration: none;
+		&:hover {
+			color: $accent-2;
+		}
+		&:visited:hover {
+			color: $accent-2;
+			text-decoration: inherit;
+		}
 	}
 }

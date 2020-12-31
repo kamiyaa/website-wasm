@@ -1,13 +1,13 @@
 use yew::prelude::*;
 
-pub fn component() -> Html {
+pub fn content() -> Html {
     html! {
     <div>
         <h5>{ "Background" }</h5>
         <p>
         { "At first, I wanted to learn " }<b>{ "C++" }</b>{ " because it had all the features of a modern language while still being comparable to C in performance. While researching about C++, I stumbled across Rust, the shiny new language that supposedly competes in the same space as C and C++. Curious and attracted by all the benefits it claimed, I decided to learn Rust instead. This project is encapsulates much of what I learned of the Rust programming Language." }
-        </p>
-        <p>{ "Everyday, I use a popular terminal file manager called "}
+        <br/>
+        { "Everyday, I use a popular terminal file manager called "}
         <b><a
             target="_blank"
             rel="noopener noreferrer"

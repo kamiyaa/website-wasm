@@ -1,8 +1,8 @@
 use yew::prelude::*;
 
-use super::PageTemplate;
 use crate::components::{ExperienceCard, MenuStrip};
-use crate::data::{AppRoute, ExperienceListType, EXTRACURRICULAR_LIST};
+use crate::data::{ExperienceListType, EXTRACURRICULAR_LIST};
+use crate::routes::AppRoute;
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -31,16 +31,6 @@ impl Component for ExperienceList {
     }
 
     fn view(&self) -> Html {
-        let bookmarks = ["Experiences", "Extracurricular"];
-        let bookmarks_component = bookmarks
-            .iter()
-            .map(|b| {
-                html! {
-                    <a class="article-topbar-link" href={format!("#{}", b)}>{b}</a>
-                }
-            })
-            .collect::<Html>();
-
         let list_content = self
             .props
             .list
@@ -54,22 +44,10 @@ impl Component for ExperienceList {
             .collect::<Html>();
 
         html! {
-        <PageTemplate>
-        <div class="article">
-            <MenuStrip>{bookmarks_component}</MenuStrip>
-            <div class="article-content">
-            <h1 id="Experiences">{"Experiences"}</h1>
-                <div class="flex_card_list">
-                    {list_content}
-                </div>
-            <h1 id="Extracurricular">{"Extracurricular"}</h1>
-                <div>
-                {extracurricular_content()}
-                </div>
-            </div>
+        <div class="flex_card_list">
+            {list_content}
         </div>
-        </PageTemplate>
-                }
+            }
     }
 }
 

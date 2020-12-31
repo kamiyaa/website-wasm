@@ -4,9 +4,9 @@
 
 .footer {
 	align-items: flex-end;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: $card-bg;
 	border-width: 0px;
-	color: white;
+	color: $fg-2;
 	display: flex;
 	flex-wrap: wrap;
 	font-family: $font-family-p;
@@ -17,7 +17,7 @@
 		padding: 0px;
 		text-decoration: none;
 		&:hover {
-			color: $primary-yellow;
+			color: $accent-1;
 		}
 	}
 
@@ -44,7 +44,7 @@
 	margin-right: 0.8rem;
 	transition: 0.3s;
 	&:hover {
-		color: $primary-yellow;
+		color: $accent-1;
 	}
 }
 
@@ -53,7 +53,7 @@
 	font-size: 1rem;
 	transition: 0.3s;
 	&:hover {
-		color: $primary-yellow;
+		color: $accent-1;
 	}
 }
 
@@ -61,27 +61,5 @@
 	.footer {
 		justify-content: space-between;
 		padding: 1rem 0 0 0;
-	}
-}
-
-.logo-link {
-	font-weight: bold;
-	letter-spacing: 4px;
-	a {
-		color: white;
-		border-bottom: 3px solid white;
-		text-decoration: none;
-		&:visited {
-			color: white;
-		}
-	}
-}
-
-.social_links {
-	ul {
-		list-style-type: none;
-	}
-	li {
-		display: inline;
 	}
 }

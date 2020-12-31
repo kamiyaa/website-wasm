@@ -1,12 +1,10 @@
-@import "animations.scss";
 @import "colors.scss";
 @import "constants.scss";
 @import "fonts.scss";
 
 .code-block {
-	background-color: $body-bg;
-	border-radius: 6px;
-	box-shadow: 0 0 16px -4px #888;
+	background-color: $card-bg;
+	border-radius: 10px;
 	color: white;
 	margin: 1rem 0 1rem 0;
 	padding: 1rem;

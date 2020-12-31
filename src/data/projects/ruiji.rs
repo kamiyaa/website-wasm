@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-pub fn component() -> Html {
+pub fn content() -> Html {
     html! {
     <div>
     <p>{ "This project was initially for my own personal use, but I thought some people might find it useful as well." }

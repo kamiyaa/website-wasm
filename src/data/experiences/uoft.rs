@@ -1,6 +1,16 @@
 use yew::prelude::*;
 
-pub fn component() -> Html {
+pub fn summary() -> Html {
+    html! {
+    <ul>
+    <li>{ "- Taught tutorials of 30 students on various computer science topics" }</li>
+    <li>{ "- Facilitated labs, office hours and study groups to help students understand advanced computer science topics" }</li>
+    <li>{ "- Explained and clarified concepts such as polymorphism, inheritance, interfaces, pointers, memory allocations, generics and many more" }</li>
+    </ul>
+    }
+}
+
+pub fn content() -> Html {
     html! {
     <div>
     <p>{ "Courses taught:" }

@@ -40,9 +40,7 @@ impl Component for PageTemplate {
         html! {
         <div>
         <Header/>
-        <div>
             { self.props.children.clone() }
-        </div>
         <Footer/>
         </div>
                 }

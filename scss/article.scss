@@ -1,69 +1,15 @@
-@import "animations.scss";
 @import "colors.scss";
 @import "constants.scss";
 @import "fonts.scss";
 
 .article {
-	@include animate(article-animation 500ms);
-	border-color: #999;
-	border-style: solid;
-	border-width: 0px;
+	background: rgba(0, 0, 0, 0);
+	color: $fg-2;
 	margin: 0rem 2rem;
-	z-index: 1;
-
-	a {
-		color: $color-orange2;
-		text-decoration: none;
-	}
-}
-
-@media only screen and (max-width: $mobile-max-size) {
-	.article {
-		margin: 0;
-	}
-}
-
-.article-topbar {
-	background-color: $bg-color-faded-l03;
-	display: flex;
-	font-family: $font-family-p;
-	justify-content: space-between;
-	margin: 0;
-	a {
-		color: white;
-		background-color: rgba(0, 0, 0, 0);
-		padding: 1rem;
-		text-decoration: none;
-		transition: 300ms;
-		&:hover {
-			background-color: rgba(0, 0, 0, 0.25);
-		}
-		&:visited {
-			color: white;
-		}
-	}
-}
-
-@media only screen and (max-width: $mobile-max-size) {
-	.article-topbar {
-		a {
-			padding: 0.7rem;
-		}
-	}
-}
-
-.article-topbar-link {
-	background-color: $article-bg;
-	padding: 0.7rem;
-	text-align: center;
-}
-
-.article-content {
-	background-color: $article-bg;
 	font-family: $font-family-p;
 	font-size: $article-font-size;
 	overflow-x: auto;
-	padding: 1rem 3rem 2rem 3rem;
+	z-index: 1;
 
 	h1 {
 		border-bottom: 3px solid black;
@@ -96,18 +42,23 @@
 	}
 
 	p {
-		margin: 0;
 		font-size: $article-font-size;
+		line-height: 1.4;
+		margin: 0;
 	}
 
 	li {
 		font-size: $article-font-size;
 	}
+	a {
+		color: $accent-2;
+		text-decoration: none;
+	}
 }
-
 @media only screen and (max-width: $mobile-max-size) {
-	.article-content {
-		background-color: $article-bg;
+	.article {
+		margin: 0;
+		background-color: $bg-light1;
 		font-size: $article-font-size-mobile;
 		padding: 0.3rem 1.1rem 2rem 1.1rem;
 
@@ -153,4 +104,8 @@
 			font-size: $article-font-size-mobile;
 		}
 	}
+}
+
+.article-content {
+	padding: 2rem 0;
 }

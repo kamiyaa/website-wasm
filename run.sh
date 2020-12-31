@@ -1,3 +1,3 @@
 #!/bin/bash
 
-miniserve ./static --index index.html
+python3 -m http.server 8080 --directory static/

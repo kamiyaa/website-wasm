@@ -1,6 +1,7 @@
 use yew::prelude::*;
 
-use crate::data::{AppRoute, Link, Experience};
+use crate::data::Experience;
+use crate::routes::{AppRoute, Link};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -31,18 +32,25 @@ impl Component for ExperienceCard {
 
     fn view(&self) -> Html {
         let experience = &self.props.experience;
+
         html! {
-        <div class="flex_card">
-            <Link route={self.props.route.clone()}>
-                <div class="flex_card_img_container">
-                         <img alt={experience.company} src={experience.preview_thumbnail_url}/>
+        <div class="horizontal_card">
+            <div class="horizontal_card_icon">
+                <div class="horizontal_card_img_cover">
+                    <img alt={experience.company} src={experience.icon_url}/>
                 </div>
-                <div class="flex_card_info">
-                    <h4>{experience.title}</h4>
+            </div>
+            <div class="horizontal_card_info">
+                <h4>{experience.title}</h4>
+                <a target="_blank" rel="noopener noreferrer"
+                    href={experience.company_url}>
                     <h6>{experience.company}</h6>
-                    <p>{experience.start_date}{" - "}{experience.end_date}</p>
-                </div>
-            </Link>
+                </a>
+                <p>{experience.start_date}{" - "}{experience.end_date}</p>
+                <br/>
+                {(experience.summary)()}
+                <Link route={self.props.route.clone()}>{"Read more"}</Link>
+            </div>
         </div>
                 }
     }

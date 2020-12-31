@@ -2,7 +2,8 @@ use yew::prelude::*;
 
 use super::PageTemplate;
 use crate::components::{ExperienceHeader, MenuStrip};
-use crate::data::{AppRoute, Link, Experience};
+use crate::data::Experience;
+use crate::routes::{AppRoute, Link};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
@@ -31,28 +32,14 @@ impl Component for ExperienceDetails {
     }
 
     fn view(&self) -> Html {
-        let bookmarks_component = html! {
-            <Link classes="article-topbar-link"
-                route={AppRoute::Experiences}>
-            <div class="menu-strip-item">
-                <div class="fa fa-angle-left fa-lg"/>
-                <div style="display: inline; margin-left: 0.5rem;">
-                { "Experiences" }
-                </div>
-            </div>
-            </Link>
-        };
-        let content = (self.props.experience.html)();
-
         html! {
         <PageTemplate>
-        <div class="article">
-            <MenuStrip>{bookmarks_component}</MenuStrip>
-            <div class="article-content">
-            <ExperienceHeader experience={&self.props.experience}/>
-            {content}
+            <div class="article">
+                <div class="article-content">
+                <ExperienceHeader experience={&self.props.experience}/>
+                {(self.props.experience.content)()}
+                </div>
             </div>
-        </div>
         </PageTemplate>
                 }
     }

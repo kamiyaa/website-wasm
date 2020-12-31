@@ -33,36 +33,36 @@ impl Component for SocialLinks {
         <ul>
             <li>
             <a
-                class="home-icon" target="_blank" rel="noopener noreferrer"
-                href={GITHUB_LINK}><i class="fab fa-github fa-lg"/>
+                class="social-icon" target="_blank" rel="noopener noreferrer"
+                href={GITHUB_LINK}><i class="fab fa-github fa-sm"/>
             </a>
             </li>
 
             <li>
             <a
-                class="home-icon" target="_blank" rel="noopener noreferrer"
-                href={LINKEDIN_LINK}><i class="fab fa-linkedin fa-lg"/>
+                class="social-icon" target="_blank" rel="noopener noreferrer"
+                href={LINKEDIN_LINK}><i class="fab fa-linkedin fa-sm"/>
             </a>
             </li>
 
             <li>
             <a
-                class="home-icon" target="_blank" rel="noopener noreferrer"
-                href={YOUTUBE_LINK}><i class="fab fa-youtube fa-lg"></i>
+                class="social-icon" target="_blank" rel="noopener noreferrer"
+                href={YOUTUBE_LINK}><i class="fab fa-youtube fa-sm"></i>
             </a>
             </li>
 
             <li>
             <a
-                class="home-icon"
-                href={EMAIL_LINK}><i class="fa fa-envelope fa-lg"/>
+                class="social-icon"
+                href={EMAIL_LINK}><i class="fa fa-envelope fa-sm"/>
             </a>
             </li>
 
             <li>
             <a
-                class="home-icon"
-                href={RESUME_LINK}><i class="fa fa-file fa-lg"/>
+                class="social-icon"
+                href={RESUME_LINK}><i class="fa fa-file fa-sm"/>
             </a>
             </li>
         </ul>

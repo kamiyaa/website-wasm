@@ -1,17 +1,17 @@
-use super::AppRoute;
+use crate::routes::AppRoute;
 
 pub struct URLRoute {
     pub name: &'static str,
-    pub route: AppRoute,
+    pub route: &'static str,
 }
 
 pub static HEADER_LINKS: [URLRoute; 2] = [
     URLRoute {
         name: "Experiences",
-        route: AppRoute::Experiences,
+        route: "/#experiences",
     },
     URLRoute {
         name: "Projects",
-        route: AppRoute::Projects,
+        route: "/#projects",
     },
 ];
