@@ -35,14 +35,17 @@ impl Component for ContributionList {
                 html! {
                     <div class="horizontal_card">
                         <a
+                            class="horizontal_card_icon"
                             target="_blank"
                             rel="noopener noreferrer"
                             href={v.url}>
+                            <div class="horizontal_card_img_cover">
                             <img
                                 class="horizontal_card_icon"
                                 alt={v.name}
                                 src={v.icon_url}
                             />
+                            </div>
                         </a>
                         <div class="horizontal_card_info">
 
