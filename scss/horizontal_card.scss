@@ -101,6 +101,7 @@ $card-p-size: $card-h6-size;
 }
 
 .horizontal_card_header {
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
