@@ -16,7 +16,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
     Contribution {
         name: "Capstone",
         url: "https://github.com/aquynh/capstone",
-        icon_url: "http://www.capstone-engine.org/img/capstone.png",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/capstone_icon.png",
         description: "Multi-platform, multi-architecture disassembly framework",
         languages: &["C"],
         html: || {
@@ -48,7 +48,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
     Contribution {
         name: "Maven",
         url: "https://github.com/carlossg/docker-maven",
-        icon_url: "http://cdn.onlinewebfonts.com/svg/img_161017.png",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/maven_icon.png",
         description: "Maven Dockerfiles",
         languages: &["Scripting"],
         html: || {
