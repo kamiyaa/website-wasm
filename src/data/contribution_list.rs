@@ -22,8 +22,8 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
         html: || {
             html! {
             <ul id="capstone">
-                <li>{ "Add build support for IBM platforms such as AIX and zOS" }</li>
-                <li>{ "Fix zOS instruction disassembly for instructions where base is 0 but index is not" }</li>
+                <li>{ "- Add build support for IBM platforms such as AIX and zOS" }</li>
+                <li>{ "- Fix zOS instruction disassembly for instructions where base is 0 but index is not" }</li>
             </ul>
                     }
         },
@@ -37,7 +37,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
         html: || {
             html! {
             <ul>
-                <li>{ "Package maintainer for " }<a
+                <li>{ "- Package maintainer for " }<a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/easymodo/qimgv">{ "qimgv" }</a></li>
@@ -54,7 +54,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
         html: || {
             html! {
             <ul>
-                <li>{ "Add Dockerfile with " }<a
+                <li>{ "- Add Dockerfile with " }<a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.eclipse.org/openj9/">{ "OpenJ9" }</a>{ " as Java implementation" }</li>
@@ -71,7 +71,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
         html: || {
             html! {
             <ul>
-                <li>{ "Add Dockerfile with " }<a
+                <li>{ "- Add Dockerfile with " }<a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.eclipse.org/openj9/">{ "OpenJ9" }</a>{ " as Java implementation
@@ -79,7 +79,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.eclipse.org/openj9/docs/shrc/">{ "Shared Classes Cache" }</a>{ " enabled" }</li>
-                <li>{ "Decrease memory usage by up to 40% and decrease startup times by up to 30%" }</li>
+                <li>{ "- Decrease memory usage by up to 40% and decrease startup times by up to 30%" }</li>
             </ul>
                     }
         },

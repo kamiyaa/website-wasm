@@ -113,7 +113,7 @@ impl Component for ProjectHeader {
 
         html! {
         <div>
-            <h3 id={project.name}>{project.name}</h3>
+            <h2 id={project.name}>{project.name}</h2>
             <br/>
             <h6>{project.description}{", "}{project.languages.join(", ")}</h6>
             <div class="project-github">

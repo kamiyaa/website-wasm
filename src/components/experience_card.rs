@@ -47,7 +47,6 @@ impl Component for ExperienceCard {
                     <h6>{experience.company}</h6>
                 </a>
                 <p>{experience.start_date}{" - "}{experience.end_date}</p>
-                <br/>
                 {(experience.summary)()}
                 <Link route={self.props.route.clone()}>{"Read more"}</Link>
             </div>

@@ -58,8 +58,6 @@ impl Component for Home {
                     </div>
                 </div>
             </div>
-            <br/>
-            <br/>
             <Footer/>
         </div>
                 }
