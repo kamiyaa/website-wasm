@@ -1,21 +1,19 @@
 use yew::prelude::*;
 
-use crate::data::Experience;
-use crate::routes::{AppRoute, Link};
+use crate::data::Contribution;
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {
-    pub experience: &'static Experience,
-    pub route: AppRoute,
+    pub contribution: &'static Contribution,
 }
 
 #[derive(Clone, Debug)]
-pub struct ExperienceCard {
+pub struct ContributionCard {
     props: Props,
     link: ComponentLink<Self>,
 }
 
-impl Component for ExperienceCard {
+impl Component for ContributionCard {
     type Message = ();
     type Properties = Props;
     fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
@@ -31,29 +29,26 @@ impl Component for ExperienceCard {
     }
 
     fn view(&self) -> Html {
-        let experience = &self.props.experience;
-
+        let contrib = &self.props.contribution;
         html! {
         <div class="horizontal_card">
             <div class="horizontal_card_container">
                 <div class="horizontal_card_header">
                     <div class="horizontal_card_icon">
-                        <div class="horizontal_card_img_cover">
-                            <img alt={experience.company} src={experience.icon_url}/>
-                        </div>
+                        <a target="_blank" rel="noopener noreferrer" href={contrib.url}>
+                            <div class="horizontal_card_img_cover">
+                                <img class="horizontal_card_icon" alt={contrib.name} src={contrib.icon_url}/>
+                            </div>
+                        </a>
                     </div>
                     <div class="horizontal_card_info">
-                        <h4>{experience.title}</h4>
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={experience.company_url}>
-                            <h6>{experience.company}</h6>
-                        </a>
-                        <p>{experience.start_date}{" - "}{experience.end_date}</p>
+                        <h3 id={contrib.name}>{contrib.name}</h3>
+                        <h5>{contrib.languages.join(", ")}</h5>
+                        <p>{contrib.description}</p>
                     </div>
                 </div>
                 <div class="horizontal_card_info">
-                    {(experience.summary)()}
-                    <Link route={self.props.route.clone()}>{"Read more"}</Link>
+                    {(contrib.html)()}
                 </div>
             </div>
         </div>

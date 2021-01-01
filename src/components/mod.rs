@@ -1,3 +1,4 @@
+mod contribution_card;
 mod contribution_list;
 mod experience_card;
 mod experience_header;
@@ -10,6 +11,7 @@ mod project_header;
 mod project_list;
 mod social_links;
 
+pub use self::contribution_card::ContributionCard;
 pub use self::contribution_list::ContributionList;
 pub use self::experience_card::ExperienceCard;
 pub use self::experience_header::ExperienceHeader;

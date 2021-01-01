@@ -12,7 +12,7 @@
 	margin: 0;
 	padding: 0;
 	ul {
-		margin: 1rem 0;
+		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
@@ -28,7 +28,9 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	font-family: $font-family-p;
-	justify-content: center;
+	justify-content: space-around;
+	margin: 0 3rem;
+	padding: 2rem 0 0 0;
 
 	ul {
 		margin: 1rem 0;
@@ -40,9 +42,15 @@
 	}
 }
 
+@media only screen and (max-width: $mobile-max-size) {
+	.home-header {
+		margin: 0 1rem;
+	}
+}
+
 .home-header-section {
 	font-size: $article-font-size;
-	margin: 1rem;
+	margin: 0;
 }
 
 .home-section {
@@ -110,8 +118,7 @@
 
 .home-profile {
 	border-radius: 9999px;
-	margin-top: 1rem;
-	margin-bottom: 0;
+	margin: 1rem 2rem 1rem 2rem;
 	height: 12rem;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }

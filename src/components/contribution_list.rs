@@ -1,5 +1,6 @@
 use yew::prelude::*;
 
+use crate::components::ContributionCard;
 use crate::data::ContributionListType;
 
 #[derive(Clone, Debug, Properties)]
@@ -31,32 +32,7 @@ impl Component for ContributionList {
             .props
             .list
             .iter()
-            .map(|v| {
-                html! {
-                    <div class="horizontal_card">
-                        <a
-                            class="horizontal_card_icon"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={v.url}>
-                            <div class="horizontal_card_img_cover">
-                            <img
-                                class="horizontal_card_icon"
-                                alt={v.name}
-                                src={v.icon_url}
-                            />
-                            </div>
-                        </a>
-                        <div class="horizontal_card_info">
-
-                            <h3 id={v.name}>{v.name}</h3>
-                            <h5>{v.languages.join(", ")}</h5>
-                            <p>{v.description}</p>
-                            {(v.html)()}
-                        </div>
-                    </div>
-                }
-            })
+            .map(|v| html! { <ContributionCard contribution={v}/> })
             .collect::<Html>();
 
         html! {
