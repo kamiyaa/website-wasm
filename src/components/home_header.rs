@@ -1,4 +1,3 @@
-use web_sys::Element;
 use yew::prelude::*;
 
 use crate::components::SocialLinks;

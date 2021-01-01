@@ -1,7 +1,7 @@
 use yew::prelude::*;
 
-use crate::components::{ContributionList, MenuStrip, ProjectCard};
-use crate::data::{ProjectListType, CONTRIBUTION_LIST};
+use crate::components::ProjectCard;
+use crate::data::ProjectListType;
 use crate::routes::AppRoute;
 
 #[derive(Clone, Debug, Properties)]

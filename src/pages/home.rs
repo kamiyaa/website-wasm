@@ -1,11 +1,7 @@
 use yew::prelude::*;
 
-use crate::components::{Footer, HomeHeader};
-use crate::data::LOGO_NAME;
+use crate::components::{ContributionList, ExperienceList, Footer, HomeHeader, ProjectList};
 use crate::data::{CONTRIBUTION_LIST, EXPERIENCE_LIST, PROJECT_LIST};
-use crate::routes::{AppRoute, Link};
-
-use crate::components::{ContributionList, ExperienceList, ProjectList};
 
 pub struct Home;
 

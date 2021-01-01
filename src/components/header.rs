@@ -1,7 +1,6 @@
-use web_sys::Element;
 use yew::prelude::*;
 
-use crate::data::{HEADER_LINKS, LOGO_NAME};
+use crate::data::LOGO_NAME;
 use crate::routes::{AppRoute, Link};
 
 #[derive(Clone, Debug)]

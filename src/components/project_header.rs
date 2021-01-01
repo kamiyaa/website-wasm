@@ -45,11 +45,8 @@ impl Component for ProjectHeader {
                 "{}/{}",
                 self.props.project.owner, self.props.project.repo_name
             );
-            match map.entry(key) {
-                Entry::Vacant(entry) => {
-                    entry.insert(g.clone());
-                }
-                _ => {}
+            if let Entry::Vacant(entry) = map.entry(key) {
+                entry.insert(*g);
             };
         }
         true

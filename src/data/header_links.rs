@@ -1,5 +1,3 @@
-use crate::routes::AppRoute;
-
 pub struct URLRoute {
     pub name: &'static str,
     pub route: &'static str,

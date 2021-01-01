@@ -1,9 +1,8 @@
 use yew::prelude::*;
 
 use super::PageTemplate;
-use crate::components::{ExperienceHeader, MenuStrip};
+use crate::components::ExperienceHeader;
 use crate::data::Experience;
-use crate::routes::{AppRoute, Link};
 
 #[derive(Clone, Debug, Properties)]
 pub struct Props {

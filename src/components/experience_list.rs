@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-use crate::components::{ExperienceCard, MenuStrip};
+use crate::components::ExperienceCard;
 use crate::data::{ExperienceListType, EXTRACURRICULAR_LIST};
 use crate::routes::AppRoute;
 
