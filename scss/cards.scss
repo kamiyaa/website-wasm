@@ -69,18 +69,23 @@ $card-p-size: $card-h6-size;
 
 .flex_card_img_container {
 	width: 100%;
+	max-height: 180px;
+	overflow: hidden;
+}
 
+.flex_card_img {
+	display: flex;
+	justify-content: center;
 	img {
 		background-size: cover;
 		width: 100%;
-		height: 100%;
 		margin: 0;
 		padding: 0;
 	}
 }
 
-@media only screen and (max-width: $mobile-max-size) {
 
+@media only screen and (max-width: $mobile-max-size) {
 	$card-h3-size: 20px;
 	$card-h4-size: $card-h3-size - 2px;
 	$card-h5-size: $card-h4-size - 2px;
@@ -130,7 +135,7 @@ $card-p-size: $card-h6-size;
 	color: white;
 	flex: 1;
 	flex-basis: 30%;
-	padding: 0 0.6rem 0.3rem 0.6rem;
+	padding: 0.4rem 0.6rem 0.3rem 0.6rem;
 }
 
 .horizontal_card {

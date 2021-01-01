@@ -36,7 +36,9 @@ impl Component for ProjectCard {
         <div class="flex_card">
             <Link route={self.props.route.clone()}>
                 <div class="flex_card_img_container">
+                    <div class="flex_card_img">
                          <img alt={project.name} src={project.preview_url}/>
+                    </div>
                 </div>
                 <div class="flex_card_info">
                         <h4>{project.name}</h4>
