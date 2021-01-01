@@ -28,8 +28,7 @@ pub static EXPERIENCE_LIST: ExperienceListType = [
         summary: spiretrading::summary,
         content: spiretrading::content,
         tags: &[
-            "C", "Java", "Docker", "Jenkins", "Appsody", "Maven", "Capstone", "Linux", "AIX",
-            "z/OS", "PowerPC", "Systemz",
+            "Python", "FSA", "Arbitrage", "Bitcoin", "TSX", "QBTC.U", "matplotlib", "numpy"
         ],
     },
     Experience {
