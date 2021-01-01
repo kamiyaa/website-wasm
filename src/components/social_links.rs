@@ -2,7 +2,7 @@ use yew::prelude::*;
 
 const GITHUB_LINK: &str = "https://github.com/kamiyaa/";
 const LINKEDIN_LINK: &str = "https://www.linkedin.com/in/jiayii-zhao/";
-const YOUTUBE_LINK: &str = "https://www.youtube.com/channel/UC6NPLaq5poP-CoLo3DPCC8w";
+const YOUTUBE_LINK: &str = "https://www.youtube.com/c/Kamiyaa";
 const EMAIL_LINK: &str = "mailto:jeff.no.zhao@gmail.com";
 const RESUME_LINK: &str =
     "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/Resume-Jeff-Zhao.pdf";
