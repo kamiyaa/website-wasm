@@ -30,7 +30,9 @@ impl Component for Home {
             <HomeHeader/>
             <div class="home-section">
                 <div style="width: 100%;">
-                    <h2 id="experiences">{"Experiences"}</h2>
+                    <a class="link" href="/#experiences">
+                        <h2 id="experiences">{"Experiences"}</h2>
+                    </a>
                     <div>
                     <ExperienceList list={&EXPERIENCE_LIST}/>
                     </div>
@@ -38,7 +40,9 @@ impl Component for Home {
             </div>
             <div class="home-section">
                 <div style="width: 100%;">
-                    <h2 id="projects">{"Projects"}</h2>
+                    <a class="link" href="/#projects">
+                        <h2 id="projects">{"Projects"}</h2>
+                    </a>
                     <div>
                     <ProjectList list={&PROJECT_LIST}/>
                     </div>
@@ -46,7 +50,9 @@ impl Component for Home {
             </div>
             <div class="home-section">
                 <div style="width: 100%;">
-                    <h2 id="contributions">{"Contributions"}</h2>
+                    <a class="link" href="/#contributions">
+                        <h2 id="contributions">{"Contributions"}</h2>
+                    </a>
                     <div>
                     <ContributionList list={&CONTRIBUTION_LIST}/>
                     </div>

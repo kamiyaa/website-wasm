@@ -2,11 +2,21 @@
 @import "constants.scss";
 @import "fonts.scss";
 
+.link {
+		color: $fg-1;
+		font-size: $font-section-size;
+		transition: 0.3s;
+		text-decoration: none;
+		&:hover {
+			color: $accent-2;
+		}
+}
+
 .social_links {
 	transition: 400s;
 	a {
 		color: $fg-1;
-		font-size: 1.6rem;
+		font-size: 1rem;
 		transition: 0.3s;
 		&:hover {
 			color: $accent-2;

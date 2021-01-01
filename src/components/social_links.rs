@@ -34,35 +34,35 @@ impl Component for SocialLinks {
             <li>
             <a
                 class="social-icon" target="_blank" rel="noopener noreferrer"
-                href={GITHUB_LINK}><i class="fab fa-github fa-sm"/>
+                href={GITHUB_LINK}><i class="fab fa-github fa-2x"/>
             </a>
             </li>
 
             <li>
             <a
                 class="social-icon" target="_blank" rel="noopener noreferrer"
-                href={LINKEDIN_LINK}><i class="fab fa-linkedin fa-sm"/>
+                href={LINKEDIN_LINK}><i class="fab fa-linkedin fa-2x"/>
             </a>
             </li>
 
             <li>
             <a
                 class="social-icon" target="_blank" rel="noopener noreferrer"
-                href={YOUTUBE_LINK}><i class="fab fa-youtube fa-sm"></i>
+                href={YOUTUBE_LINK}><i class="fab fa-youtube fa-2x"></i>
             </a>
             </li>
 
             <li>
             <a
                 class="social-icon"
-                href={EMAIL_LINK}><i class="fa fa-envelope fa-sm"/>
+                href={EMAIL_LINK}><i class="fa fa-envelope fa-2x"/>
             </a>
             </li>
 
             <li>
             <a
                 class="social-icon"
-                href={RESUME_LINK}><i class="fa fa-file fa-sm"/>
+                href={RESUME_LINK}><i class="fa fa-file fa-2x"/>
             </a>
             </li>
         </ul>

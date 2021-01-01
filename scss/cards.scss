@@ -2,6 +2,12 @@
 @import "constants.scss";
 @import "fonts.scss";
 
+$card-h3-size: 24px;
+$card-h4-size: $card-h3-size - 2px;
+$card-h5-size: $card-h4-size - 2px;
+$card-h6-size: $card-h5-size - 2px;
+$card-p-size: $card-h6-size;
+
 .flex_card_list {
 	align-items: flex-start;
 	display: flex;
@@ -25,31 +31,31 @@
 	}
 
 	h3 {
-		font-size: 22px;
+		font-size: $card-h3-size;
 		font-weight: bold;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h4 {
-		font-size: 20px;
+		font-size: $card-h4-size;
 		font-weight: bold;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h5 {
 		font-weight: normal;
-		font-size: 18px;
+		font-size: $card-h5-size;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h6 {
 		font-weight: normal;
-		font-size: 16px;
+		font-size: $card-h6-size;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	p {
-		font-size: $card-p-font-size;
+		font-size: $card-p-size;
 		color: #aaa;
 		margin: 0.3rem 0 0.3rem 0;
 	}
@@ -74,23 +80,42 @@
 }
 
 @media only screen and (max-width: $mobile-max-size) {
+
+	$card-h3-size: 20px;
+	$card-h4-size: $card-h3-size - 2px;
+	$card-h5-size: $card-h4-size - 2px;
+	$card-h6-size: $card-h5-size - 2px;
+	$card-p-size: $card-h6-size;
+
 	.flex_card {
 		margin: 1rem 0rem 1rem 0rem;
 
 		h3 {
-			font-size: 20px;
+			font-size: $card-h3-size;
+			font-weight: bold;
+			margin: 0.3rem 0 0.3rem 0;
+		}
+
+		h4 {
+			font-size: $card-h4-size;
 			font-weight: bold;
 			margin: 0.3rem 0 0.3rem 0;
 		}
 
 		h5 {
 			font-weight: normal;
-			font-size: 16px;
+			font-size: $card-h5-size;
+			margin: 0.3rem 0 0.3rem 0;
+		}
+
+		h6 {
+			font-weight: normal;
+			font-size: $card-h6-size;
 			margin: 0.3rem 0 0.3rem 0;
 		}
 
 		p {
-			font-size: 14px;
+			font-size: $card-p-size;
 			color: #aaa;
 			margin: 0.3rem 0 0.3rem 0;
 		}
@@ -117,35 +142,37 @@
 	transition: 250ms ease-in;
 
 	h3 {
-		font-size: 22px;
-		font-weight: 700;
+		font-size: $card-h3-size;
+		font-weight: bold;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h4 {
-		font-size: 20px;
-		font-weight: 500;
+		font-size: $card-h4-size;
+		font-weight: bold;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h5 {
 		font-weight: normal;
-		font-size: 18px;
+		font-size: $card-h5-size;
 		margin: 0.3rem 0 0.3rem 0;
 	}
 
 	h6 {
 		font-weight: normal;
-		font-size: 16px;
+		font-size: $card-h6-size;
 		margin: 0.3rem 0 0.3rem 0;
 	}
+
 	p {
-		font-size: $card-p-font-size;
-		color: #aaa;
+		font-size: $card-p-size;
+		color: $fg-2;
 		margin: 0.3rem 0 0.3rem 0;
 	}
+
 	ul li {
-		font-size: 15px;
+		font-size: $card-p-size;
 	}
 
 }
@@ -201,23 +228,41 @@
 }
 
 @media only screen and (max-width: $mobile-max-size) {
+	$card-h3-size: 20px;
+	$card-h4-size: $card-h3-size - 2px;
+	$card-h5-size: $card-h4-size - 2px;
+	$card-h6-size: $card-h5-size - 2px;
+	$card-p-size: $card-h6-size;
+
 	.horizontal_card {
 		margin: 0.5rem 0rem 0.5rem 0;
 
 		h3 {
-			font-size: 20px;
+			font-size: $card-h3-size;
+			font-weight: bold;
+			margin: 0.3rem 0 0.3rem 0;
+		}
+
+		h4 {
+			font-size: $card-h4-size;
 			font-weight: bold;
 			margin: 0.3rem 0 0.3rem 0;
 		}
 
 		h5 {
 			font-weight: normal;
-			font-size: 16px;
+			font-size: $card-h5-size;
+			margin: 0.3rem 0 0.3rem 0;
+		}
+
+		h6 {
+			font-weight: normal;
+			font-size: $card-h6-size;
 			margin: 0.3rem 0 0.3rem 0;
 		}
 
 		p {
-			font-size: 14px;
+			font-size: $card-p-size;
 			color: #aaa;
 			margin: 0.3rem 0 0.3rem 0;
 		}
