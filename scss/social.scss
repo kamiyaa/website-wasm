@@ -16,7 +16,7 @@
 	transition: 400s;
 	a {
 		color: $fg-1;
-		font-size: 1rem;
+		font-size: 1.5rem;
 		transition: 0.3s;
 		&:hover {
 			color: $accent-2;
@@ -33,7 +33,6 @@
 
 .social-icon {
 	color: inherit;
-	font-size: 26px;
 	transition: 0.3s;
 	&:hover &:visited:hover {
 		color: $accent-2;
