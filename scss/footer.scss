@@ -15,15 +15,15 @@
 	padding: 1rem 2rem 2rem 2rem;
 
 	a {
-		padding: 0px;
+		color: $accent-2;
 		text-decoration: none;
+		transition: 0.3s;
 		&:hover {
 			color: $accent-1;
 		}
 	}
-
 	ul {
-		margin: 0.8rem;
+		margin: 0;
 		padding: 0;
 		list-style: none;
 	}

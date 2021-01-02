@@ -30,3 +30,21 @@ $error-font-color: #ac353c;
 	display: none;
 	padding: 1rem;
 }
+
+.base {
+	align-items: flex-start;
+	color: $fg-2;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: $font-family-p;
+	margin: 0;
+	padding: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin: 0.5rem 0;
+	}
+}

@@ -3,24 +3,6 @@
 @import "constants.scss";
 @import "fonts.scss";
 
-.home {
-	align-items: flex-start;
-	color: $fg-2;
-	flex-direction: column;
-	flex-wrap: wrap;
-	font-family: $font-family-p;
-	margin: 0;
-	padding: 0;
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	li {
-		margin: 0.5rem 0;
-	}
-}
-
 .home-header {
 	align-items: flex-start;
 	color: $fg-2;
@@ -29,8 +11,7 @@
 	flex-wrap: wrap;
 	font-family: $font-family-p;
 	justify-content: space-around;
-	margin: 0 3rem;
-	padding: 2rem 0 0 0;
+	padding: 2rem 3rem 0 3rem;
 
 	ul {
 		margin: 1rem 0;
@@ -44,7 +25,7 @@
 
 @media only screen and (max-width: $mobile-max-size) {
 	.home-header {
-		margin: 0 1rem;
+		padding: 2rem 1rem 0 1rem;
 	}
 }
 
@@ -55,7 +36,7 @@
 
 .home-section {
 	display: flex;
-	margin: 0 3rem;
+	padding: 0 3rem;
 	overflow-x: auto;
 
 	h2 {
@@ -65,7 +46,7 @@
 
 @media only screen and (max-width: $mobile-max-size) {
 	.home-section {
-		margin: 0 1rem;
+		padding: 0 1rem;
 	}
 }
 

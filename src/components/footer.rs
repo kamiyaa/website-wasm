@@ -29,7 +29,8 @@ impl Component for Footer {
                 <SocialLinks/>
             </div>
             <div class="flex_group">
-            <p>{ "Built in WebAssembly using yew.rs" }
+            <p>{ "Built in WebAssembly using " }
+                <a target="_blank" href="https://yew.rs/">{ "yew.rs" }</a>
             </p>
             </div>
         </footer>

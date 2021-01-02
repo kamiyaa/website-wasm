@@ -22,7 +22,7 @@ impl Component for Home {
 
     fn view(&self) -> Html {
         html! {
-        <div class="home">
+        <div class="base">
             <HomeHeader/>
             <div class="home-section">
                 <div style="width: 100%;">
