@@ -37,7 +37,7 @@ impl Component for ContributionCard {
                     <div class="horizontal_card_icon">
                         <a target="_blank" rel="noopener noreferrer" href={contrib.url}>
                             <div class="horizontal_card_img_cover">
-                                <img class="horizontal_card_icon" alt={contrib.name} src={contrib.icon_url}/>
+                                <img alt={contrib.name} src={contrib.icon_url}/>
                             </div>
                         </a>
                     </div>

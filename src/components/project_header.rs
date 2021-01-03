@@ -60,12 +60,12 @@ impl Component for ProjectHeader {
         let project = &self.props.project;
         let tag_component = html! {
             <div class="tag-list-container">
-            <ul>
-                { project.tags.iter()
-                    .map(|tag| html!{ <li>{tag}</li> })
-                    .collect::<Html>()
-                }
-            </ul>
+                <ul>
+                    { project.tags.iter()
+                        .map(|tag| html!{ <li>{tag}</li> })
+                        .collect::<Html>()
+                    }
+                </ul>
             </div>
         };
         if let FetchState::Never = self.fetch_state {

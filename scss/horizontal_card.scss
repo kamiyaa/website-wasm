@@ -105,6 +105,7 @@ $card-p-size: $card-h6-size;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+    width: 100%;
 }
 @media only screen and (max-width: $mobile-max-size) {
 	.horizontal_card_header {
