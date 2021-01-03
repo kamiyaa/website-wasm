@@ -65,7 +65,7 @@ pub static CONTRIBUTION_LIST: ContributionListType = [
     Contribution {
         name: "Jenkins",
         url: "https://github.com/jenkinsci/jenkins",
-        icon_url: "https://jenkins.io/images/logos/jenkins/256.png",
+        icon_url: "https://github.com/kamiyaa/kamiyaa.github.io/releases/download/0.1.0/jenkins_icon.png",
         description: "Free and open source automation server",
         languages: &["Scripting"],
         html: || {
