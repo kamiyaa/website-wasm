@@ -2,22 +2,27 @@
 @import "constants.scss";
 @import "fonts.scss";
 
-.tag-list {
-	align-items: flex-start;
-	display: flex;
-	flex-wrap: nowrap;
-	font-family: $font-family-tag;
-	overflow-x: auto;
-	margin: 0.8rem 0 0rem 0;
-	padding: 0;
+$tag-font-size: 14px;
+
+.tag-list-container {
 	list-style: none;
 	width: 100%;
+
+	ul {
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: nowrap;
+		font-family: $font-family-tag;
+		overflow-x: auto;
+		padding: 0;
+		margin: 1rem 0 0 0;
+	}
 
 	li {
 		color: $accent-1;
 		background-color: $card-bg;
 		border-radius: 10px;
-		font-size: 14px;
+		font-size: $tag-font-size;
 		padding: 0.2rem 0.5rem;
 		margin: 0 0.2rem;
 		transition: 500ms ease;
@@ -26,10 +31,9 @@
 }
 
 @media only screen and (max-width: $mobile-max-size) {
-	#tag-list {
-		margin: 0.8rem 0 0 0;
+	#tag-list-container {
 		li {
-			font-size: 12px;
+			font-size: $tag-font-size - 2px;
 			margin: 0 0.1rem;
 			padding: 0.2rem 0.5rem;
 		}

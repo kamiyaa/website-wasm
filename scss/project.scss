@@ -63,11 +63,15 @@
 }
 
 .project-github {
-	margin: 0.4rem 0;
+	align-items: flex-end;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin: 0.4rem 0.4rem;
+
 	a {
 		color: accent-2;
-		margin-right: 0.6rem;
-		transition: 0.3s;
+		transition: 500ms;
 		text-decoration: none;
 		&:hover {
 			color: $accent-1;
@@ -80,5 +84,14 @@
 
 	ul {
 		display: inline;
+	}
+}
+
+.project-github-icon {
+	margin: 0 0.2rem 0 0.6rem;
+	transition: 400ms;
+
+	&:hover {
+		color: $accent-1;
 	}
 }

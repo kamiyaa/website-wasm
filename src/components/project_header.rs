@@ -59,12 +59,14 @@ impl Component for ProjectHeader {
     fn view(&self) -> Html {
         let project = &self.props.project;
         let tag_component = html! {
-            <ul class="tag-list">
+            <div class="tag-list-container">
+            <ul>
                 { project.tags.iter()
                     .map(|tag| html!{ <li>{tag}</li> })
                     .collect::<Html>()
                 }
             </ul>
+            </div>
         };
         if let FetchState::Never = self.fetch_state {
             let map = GITHUB_METRICS.lock().unwrap();
@@ -94,13 +96,20 @@ impl Component for ProjectHeader {
 
         let metrics = match &self.fetch_state {
             FetchState::Success(g) => html! {
-                <div style="display: inline;">
-                    <div style="display: inline; margin-left: 0.4rem; margin-right: 0.2rem;">
-                    <i class="fas fa-star fa-lg"/></div>
-                    {g.stargazers_count}
-                    <div style="display: inline; margin-left: 0.6rem; margin-right: 0.2rem;">
-                    <i class="fas fa-code-branch fa-lg"/></div>
-                    {g.forks_count}
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start">
+                    <div class="project-github-icon">
+                        <i class="fas fa-star fa-lg"/>
+                    </div>
+                    <div>
+                        {g.stargazers_count}
+                    </div>
+
+                    <div class="project-github-icon">
+                        <i class="fas fa-code-branch fa-lg"/>
+                    </div>
+                    <div>
+                        {g.forks_count}
+                    </div>
                 </div>
             },
             FetchState::Error(e) => html! {<div>{e}</div>},
