@@ -18,6 +18,13 @@ impl Component for PageTemplate {
     type Message = ();
     type Properties = Props;
     fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
+        if let Some(window) = web_sys::window() {
+            window.scroll_with_scroll_to_options(
+                ScrollToOptions::new()
+                    .behavior(ScrollBehavior::Smooth)
+                    .top(0.0),
+            );
+        }
         Self { props, link }
     }
 
@@ -30,13 +37,6 @@ impl Component for PageTemplate {
     }
 
     fn view(&self) -> Html {
-        if let Some(window) = web_sys::window() {
-            window.scroll_with_scroll_to_options(
-                ScrollToOptions::new()
-                    .behavior(ScrollBehavior::Smooth)
-                    .top(0.0),
-            );
-        }
         html! {
         <div class="base">
         <Header/>
