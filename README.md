@@ -1,6 +1,8 @@
 # website-wasm
 My personal website written in rust via yew/wasm
 
+![Alt text](screenshot.png?raw=true "website-wasm")
+
 ## Dependencies
 see [here](https://yew.rs/docs/en/getting-started/build-a-sample-app)
 
